@@ -1,4 +1,8 @@
 # Infinity Canvas
+
+[![npm version](https://badge.fury.io/js/infinity-canvas.svg)](https://badge.fury.io/for/js/infinity-canvas)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Description
 This component has as objective the practicality and economy of resources when we use the canvas of the html, being able to overcome the limitation of the drawing area through methods of scroll.
 
