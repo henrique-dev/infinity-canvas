@@ -70,8 +70,8 @@ function myDrawMethod(canvas) {
 ```
 
 ### Drawing Functions
-- `ICdrawRect(x: Integer, y: Integer, w: Integer, h: Integer, contextOptions: Object, elementOptions: Object)`: Draws a rectangle with outline.
-- `ICfillRect(x: Integer, y: Integer, w: Integer, h: Integer, contextOptions: Object, elementOptions: Object)`: Draws with outline and fill a rectangle.
+- `ICdrawRect({x: Integer, y: Integer, w: Integer, h: Integer}, contextOptions: Object, elementOptions: Object)`: Draws a rectangle with outline.
+- `ICfillRect({x: Integer, y: Integer, w: Integer, h: Integer}, contextOptions: Object, elementOptions: Object)`: Draws with outline and fill a rectangle.
 - `ICdrawLines`: Under development
 - `ICdrawLine`: Under development
 - `ICdrawText`: Under development
