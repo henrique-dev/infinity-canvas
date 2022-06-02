@@ -2,6 +2,9 @@
 ## Description
 This component has as objective the practicality and economy of resources when we use the canvas of the html, being able to overcome the limitation of the drawing area through methods of scroll.
 
+## Install
+`npm install infinity-canvas` and `import ICanvas from 'infinity-canvas';`
+
 ## Usage
 First we must define a container for our component, with its respective size:
 ```html
