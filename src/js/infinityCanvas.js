@@ -302,6 +302,8 @@
 
     mainContainer.textContent = '';
     mainContainer.style.position = 'relative';
+    mainContainer.style['padding'] = '0px';
+    mainContainer.style['margin'] = '0px';
 
     componentCanvas = document.createElement('canvas');
     componentCanvas.width = canvasWidth;
