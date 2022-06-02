@@ -48,3 +48,32 @@ We can create an element to pass in the Array of elements to the canvas with the
 - `type`: String - Element drawing type.
 - `contextOptions`: Object - Settings to be applied to the canvas.
 - `elementOptions`: Object - Settings to be applied to the element.
+
+### Drawing Functions
+We can also draw manually where we can pass a function to be able to draw on the canvas:
+```js
+let infinityCanvas = new ICanvas(container, {
+  elements: elements,
+  onDraw: myDrawMethod
+});
+
+...
+
+function myDrawMethod(canvas) {
+  const ctx = canvas.context;
+  
+  ctx.ICfillRect({x: 0, y: 2900, w: 100, h: 100}, {globalAlpha: 0.5, fillStyle: "#85C1E9"});
+  ctx.ICdrawRect({x: 10, y: 10, w: 100, h: 100}, {globalAlpha: 0.5, fillStyle: "#85C1E9"});
+  
+  return false;
+}
+```
+
+### Drawing Functions
+- `ICdrawRect(x: Integer, y: Integer, w: Integer, h: Integer, contextOptions: Object, elementOptions: Object)`: Draws a rectangle with outline.
+- `ICfillRect(x: Integer, y: Integer, w: Integer, h: Integer, contextOptions: Object, elementOptions: Object)`: Draws with outline and fill a rectangle.
+- `ICdrawLines`: Under development
+- `ICdrawLine`: Under development
+- `ICdrawText`: Under development
+- `ICdrawSegments`: Under development
+- `ICdrawTextBox`: Under development
