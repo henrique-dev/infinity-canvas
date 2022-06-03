@@ -1,7 +1,7 @@
 {
   "name": "infinity-canvas",
-  "version": "0.1.2",
-  "description": "",
+  "version": "0.1.3",
+  "description": "This component has as objective the practicality and economy of resources when we use the canvas of the html, being able to overcome the limitation of the drawing area through methods of scroll.",
   "main": "dist/js/infinityCanvas.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/henrique-dev/infinity-canvas.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Paulo Henrique Gonçalves Bacelar",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/henrique-dev/infinity-canvas/issues"
   },
