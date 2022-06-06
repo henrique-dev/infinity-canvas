@@ -1,6 +1,6 @@
 {
   "name": "infinity-canvas",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "This component has as objective the practicality and economy of resources when we use the canvas of the html, being able to overcome the limitation of the drawing area through methods of scroll.",
   "main": "dist/js/infinityCanvas.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/henrique-dev/infinity-canvas/issues"
   },
-  "homepage": "https://github.com/henrique-dev/infinity-canvas#readme",
+  "homepage": "https://henrique-dev.github.io/infinity-canvas",
   "devDependencies": {
     "eslint": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",

@@ -1,1 +1,163 @@
-<h1>Hello World</h1>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Infinity Canvas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <header>
+      <div class="content-center">
+        <h1 class="title"><a href="/infinity-canvas">Infinity Canvas</a></h1>
+        <em>vanilla javascript canvas manager</em>
+      </div>
+    </header>
+    <main>
+      <div class="row gutters">
+        <div class="col col-12">
+          <h3>Demo</h3>
+          <div class="row text-center">
+            <div class="col-4">
+              <div class="form-item">
+                <label>Width</label>
+                <input id="input_width" type="number" min="1" name="name" class="is-50" value="500">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-item">
+                <label>Height</label>
+                <input id="input_height" type="number" min="1" name="name" class="is-50" value="500">
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-item is-inline w-100">
+                <label><br></label>
+                <button id="button_create" class="button w-100 secondary">Create Example</button>
+              </div>
+            </div>
+          </div>
+          <div id='canvas_container' style='width: 100%; height: 400px;'></div>
+          <br>
+          <pre><code>const container = document.getElementById('canvas_container');
+
+const elements = [
+  {
+    x: 10, y: 10, width: 100, height: 100, type: 'draw',
+    contextOptions: {globalAlpha: 0.5, fillStyle: "#85C1E9"},
+    elementOptions: {positionFixed: false}
+  }
+];
+
+let infinityCanvas = new ICanvas(container, {
+  elements: elements,
+  drawWidth: 500,
+  drawHeight: 500,
+});
+          </code></pre>
+        </div>
+      </div>
+      <div class="row gutters">
+        <div class="col col-12">
+          <h3>Description</h3>
+          <p>This component has as objective the practicality and economy of resources when we use the canvas of the html, being able to overcome the limitation of the drawing area through methods of scroll.</p>
+        </div>
+      </div>
+      <div class="row gutters">
+        <div class="col col-12">
+          <h3>Features</h3>
+          <ul>
+            <li>easy to use</li>
+            <li>no external dependencies</li>
+            <li>supports all major browsers and IE11+</li>
+            <li>customizable and extendable</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row gutters">
+        <div class="col col-12">
+          <h3>Install</h3>
+          <div class="row gutters">
+            <div class="col col-12">
+              <p>Install from <a href="https://www.npmjs.com/package/infinity-canvas">npm:</a></p>
+              <pre><code>npm install infinity-canvas</code></pre>
+              <p>And import or require</p>
+              <pre><code>import ICanvas from 'infinity-canvas';</code></pre>
+              <p>Or use CDN</p>
+              <pre><code>&lt;script src=&quot;https://unpkg.com/infinity-canvas&quot;&gt;&lt;/script&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row gutters">
+        <div class="col col-12">
+          <h3>Usage</h3>
+          <p>First we must define a container for our component, with its respective size:</p>
+          <pre><code>&lt;div id=&quot;canvas_container&quot; style=&quot;width: 100%; height: 800px;&quot;&gt;</code></pre>
+          <p>Then we take our container, and pass it to the component's constructor:</p>
+          <pre><code>const container = document.getElementById('canvas_container');
+
+const elements = [
+  {
+    x: 10, y: 10, width: 100, height: 100, type: 'draw',
+    contextOptions: {globalAlpha: 0.5, fillStyle: "#85C1E9"},
+    elementOptions: {positionFixed: false}
+  }
+];
+
+let infinityCanvas = new ICanvas(container, {
+  elements: elements,
+  drawWidth: 500,
+  drawHeight: 500,
+});
+          </code></pre>
+        </div>
+      </div>
+    </main>
+    <br>
+    <footer>
+      <div class="row gutters content-center">
+        <div class="col col-12">
+          <a class="Header-link " href="https://github.com/henrique-dev/infinity-canvas" data-hotkey="g d" aria-label="Homepage " data-turbo="false" data-analytics-event="{&quot;category&quot;:&quot;Header&quot;,&quot;action&quot;:&quot;go to dashboard&quot;,&quot;label&quot;:&quot;icon:logo&quot;}">
+            <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+              <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script defer src="https://unpkg.com/infinity-canvas"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", () => {
+        function createICanvas(container, width, height, elements) {
+          container.innerHTML = '';
+          new ICanvas(container, {
+            elements: elements,
+            drawWidth: width,
+            drawHeight: height,
+          });
+        }
+
+        const container = document.getElementById('canvas_container');
+        const elements = [
+          {
+            x: 10, y: 10, width: 100, height: 100, type: 'draw',
+            contextOptions: {globalAlpha: 0.5, fillStyle: "#85C1E9"},
+            elementOptions: {positionFixed: false}
+          }
+        ];
+
+        createICanvas(container, 500, 500, elements);
+
+        const buttonCreate = document.getElementById('button_create');
+
+        document.addEventListener('click', () => {
+          const width = document.getElementById('input_width').value;
+          const height = document.getElementById('input_height').value;
+          createICanvas(container, width, height, elements);
+        });
+      });
+    </script>
+  </body>
+</html>

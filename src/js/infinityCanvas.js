@@ -254,7 +254,8 @@
 
   function _wheel(e) {
     const scrollY = e.deltaY / 10;
-    componentScrollV.scroll(0, componentScrollV.scrollTop + scrollY);
+    const scrollX = e.deltaX / 10;
+    componentScrollV.scroll(componentScrollV.scrollLeft + scrollX, componentScrollV.scrollTop + scrollY);
     componentCanvas.cameraArea.y = componentScrollV.scrollTop;
     return e;
   }
@@ -309,7 +310,9 @@
     componentCanvas.width = canvasWidth;
     componentCanvas.height = canvasHeight;
     componentCanvas.style.position = 'absolute';
-    componentCanvas.style.float = 'left';
+    componentCanvas.style.left = '0px';
+    componentCanvas.style.top = '0px';
+    // componentCanvas.style.float = 'left';
     if (debug) componentCanvas.style.background = 'rosybrown';
     mainContainer.appendChild(componentCanvas);
 
