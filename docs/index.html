@@ -40,22 +40,7 @@
           </div>
           <div id='canvas_container' style='width: 100%; height: 400px;'></div>
           <br>
-          <pre><code>const container = document.getElementById('canvas_container');
-
-const elements = [
-  {
-    x: 10, y: 10, width: 100, height: 100, type: 'draw',
-    contextOptions: {globalAlpha: 0.5, fillStyle: "#85C1E9"},
-    elementOptions: {positionFixed: false}
-  }
-];
-
-let infinityCanvas = new ICanvas(container, {
-  elements: elements,
-  drawWidth: 500,
-  drawHeight: 500,
-});
-          </code></pre>
+          <pre><code id="code_example"></code></pre>
         </div>
       </div>
       <div class="row gutters">
@@ -130,6 +115,26 @@ let infinityCanvas = new ICanvas(container, {
     <script defer src="https://unpkg.com/infinity-canvas"></script>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", () => {
+        function generateExample(width, height) {
+          let exampleStr = `const container = document.getElementById('canvas_container');
+
+const elements = [
+  {
+    x: 10, y: 10, width: 100, height: 100, type: 'draw',
+    contextOptions: {globalAlpha: 0.5, fillStyle: '#85C1E9'},
+    elementOptions: {positionFixed: false}
+  }
+];
+
+let infinityCanvas = new ICanvas(container, {
+  elements: elements,
+  drawWidth: ${width},
+  drawHeight: ${height},
+});`
+          const codeExample = document.getElementById('code_example');
+          codeExample.innerHTML = exampleStr;
+        }
+
         function createICanvas(container, width, height, elements) {
           container.innerHTML = '';
           new ICanvas(container, {
@@ -137,6 +142,7 @@ let infinityCanvas = new ICanvas(container, {
             drawWidth: width,
             drawHeight: height,
           });
+          generateExample(width, height);
         }
 
         const container = document.getElementById('canvas_container');
@@ -152,7 +158,7 @@ let infinityCanvas = new ICanvas(container, {
 
         const buttonCreate = document.getElementById('button_create');
 
-        document.addEventListener('click', () => {
+        buttonCreate.addEventListener('click', () => {
           const width = document.getElementById('input_width').value;
           const height = document.getElementById('input_height').value;
           createICanvas(container, width, height, elements);
